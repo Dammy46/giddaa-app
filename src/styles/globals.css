@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: millik;
+  src: url(../../public/assets/millik-regular.otf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: millik, sans-serif;
+}
+.swiper-slide {
+  flex-shrink: 1 !important;
+  min-width: 300px;
+}
+.swiper-wrapper {
+  padding: 1em 0 9em;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  right: 28px !important;
+  bottom: 35px !important;
+  left: auto !important;
+  top: auto !important;
+  width: 70px !important;
+  height: 70px !important;
+}
+.swiper-button-prev {
+  margin-right: 90px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  background-image: url(../../public/assets/svgs/circle-next.svg) !important;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+.swiper-button-prev {
+  transform: rotate(300deg);
+}
+.swiper-button-next {
+  margin-right: 20px;
+}
+.table-container::-webkit-scrollbar {
+  width: 0;
+}
+.airplane {
+  background-color: #f5f5de;
+}
+@media (max-width: 680px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+@media (min-width: 1460px) {
+  .hero {
+    margin-top: 6em !important;
+  }
+}
